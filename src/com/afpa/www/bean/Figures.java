@@ -1,36 +1,45 @@
 package com.afpa.www.bean;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public abstract class Figures {
-    private double surface;
-    private double perimetre;
+    private static double surface;
+    private static double perimetre;
 
-    public double calculPerimetre(ArrayList<Double> arrayList){
+    public ArrayList<Double> taille = new ArrayList<>();
 
-        perimetre = 0;
+
+    // On calcul le périmétre d'une figure
+    //Proriété de type 'Protected' pour éviter l'utilisation des méthodes de Figures par les objets instanciés
+    protected double calculPerimetre(ArrayList<Double> arrayList){
+
+        double sum = 0;
         for (double i: arrayList) {
-            perimetre += i;
+            sum += i;
         }
-        return perimetre;
+        return perimetre = sum;
     }
 
-    public void doubleAll(){
-        surface = surface * 2;
-        perimetre = perimetre * 2;
+    public void changeTaille(ArrayList<Double> arrayList, double multiply){
+        //On crée un nouveaux tableau qui va remplacer l'état de l'ancien tableaux
+        ArrayList<Double> newArrayList = new ArrayList<>();
+        //On boucle sur les élements du tableaux afin de les ajouter dans [newArrayList] et de multiplier chaque valeur par l'argument multiply
+        for (Double coteDeLaFigure: arrayList) {
+            newArrayList.add(coteDeLaFigure * multiply);
+        }
+        //On remplace les anciens élements du tableaux par les nouveaux
+        this.taille = newArrayList;
+        //En cas de changement de taille, on re-calcul le Perimétre avec les nouvelles valeurs
+        calculPerimetre(taille);
     }
 
-    //public double changeTaille(int[] cote, double x){
-        //this.taille = x * cote;
-        //return taille;
-    //}
-    public double calculSurface(double L, double l){
+    //Methode associé pour les figures de Type Carré
+    protected double calculSurface(double L, double l){
         this.surface = L * l;
 
         return surface;
     }
-
+    //Getters
     public double getSurface() {
         return surface;
     }
