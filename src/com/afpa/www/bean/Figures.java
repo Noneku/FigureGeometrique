@@ -1,5 +1,7 @@
 package com.afpa.www.bean;
 
+import com.afpa.www.Exeptions.ExeptionFigure;
+
 import java.util.ArrayList;
 
 public abstract class Figures {
@@ -20,7 +22,8 @@ public abstract class Figures {
         return perimetre = sum;
     }
 
-    public void changeTaille(ArrayList<Double> arrayList, double multiply){
+    public void changeTaille(ArrayList<Double> arrayList, double multiply) throws ExeptionFigure {
+        if(multiply == 0) throw new ExeptionFigure(("Nombre Invalid is 0"));
         //On crée un nouveaux tableau qui va remplacer l'état de l'ancien tableaux
         ArrayList<Double> newArrayList = new ArrayList<>();
         //On boucle sur les élements du tableaux afin de les ajouter dans [newArrayList] et de multiplier chaque valeur par l'argument multiply
