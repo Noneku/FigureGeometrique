@@ -11,6 +11,8 @@ public class Triangle extends Figures {
 
     public Triangle(double tailleA, double tailleB, double tailleC) {
         Collections.addAll(taille, tailleA, tailleB, tailleC);
+        //On calcule directment le périmetre de l'objet que sera instancié
+        super.calculPerimetre(taille);
     }
 
     public ArrayList<Double> getTaille() {

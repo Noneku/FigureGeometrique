@@ -7,12 +7,15 @@ public abstract class Figures {
     private double surface;
     private double perimetre;
 
-    public double calculPerimetre(double tailleCotesA, double tailleCotesB, double tailleCotesC){
+    public double calculPerimetre(ArrayList<Double> arrayList){
 
-        perimetre = tailleCotesA + tailleCotesB + tailleCotesC;
-
-        return this.perimetre;
+        perimetre = 0;
+        for (double i: arrayList) {
+            perimetre += i;
+        }
+        return perimetre;
     }
+
     public void doubleAll(){
         surface = surface * 2;
         perimetre = perimetre * 2;
