@@ -21,10 +21,6 @@ public abstract class Figures {
         perimetre = perimetre * 2;
     }
 
-    //public double changeTaille(int[] cote, double x){
-        //this.taille = x * cote;
-        //return taille;
-    //}
     public double calculSurface(double L, double l){
         this.surface = L * l;
 
