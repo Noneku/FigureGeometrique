@@ -1,5 +1,7 @@
 package com.afpa.www.Triangle;
 
+import com.afpa.www.bean.Triangle;
+
 public class triangle_rectangle extends Triangle {
     private String nature = "Triangle Rectangle";
 

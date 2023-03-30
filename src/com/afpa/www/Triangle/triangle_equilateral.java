@@ -1,6 +1,6 @@
 package com.afpa.www.Triangle;
 
-import java.util.ArrayList;
+import com.afpa.www.bean.Triangle;
 
 public class triangle_equilateral extends Triangle {
     private String nature = "Triangle Equilateral";

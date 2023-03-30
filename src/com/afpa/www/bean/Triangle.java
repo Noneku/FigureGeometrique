@@ -1,4 +1,4 @@
-package com.afpa.www.Triangle;
+package com.afpa.www.bean;
 
 import com.afpa.www.bean.Figures;
 
@@ -7,12 +7,9 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class Triangle extends Figures {
-    private ArrayList<Double> taille = new ArrayList<>();
 
     public Triangle(double tailleA, double tailleB, double tailleC) {
         Collections.addAll(taille, tailleA, tailleB, tailleC);
-        //On calcule directment le périmetre de l'objet que sera instancié
-        super.calculPerimetre(taille);
     }
 
     public ArrayList<Double> getTaille() {
