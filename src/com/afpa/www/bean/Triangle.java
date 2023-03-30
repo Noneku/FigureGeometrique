@@ -8,6 +8,8 @@ import java.util.Collections;
 
 public class Triangle extends Figures {
 
+    public ArrayList<Double> taille = new ArrayList<>();
+
     public Triangle(double tailleA, double tailleB, double tailleC) {
         Collections.addAll(taille, tailleA, tailleB, tailleC);
     }
