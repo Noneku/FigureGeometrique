@@ -11,17 +11,23 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class TestFigure {
     @Test
-    public void testCreationFigureTaille() throws ExeptionCreationFigureTaille {
+    public void testCreationFigureTaille() {
         assertThrows(ExeptionCreationFigureTaille.class, ()-> new Carre(0));
         assertThrows(ExeptionCreationFigureTaille.class, ()-> new Carre(-1));
     }
     @Test
-    public void testCalculPerimetre() {
-    
+    public void testCalculPerimetre() throws ExeptionCreationFigureTaille {
+        Carre carre = new Carre(20);
+        ArrayList<Double> taille = carre.getTaille();
+        assertEquals(taille.get(0)*4, carre.getPerimetre());
+    }
+
+    public void testCalculSurface() throws ExeptionCalculSurface {
+
     }
 
     @Test
-    public void changeTaille() {
+    public void changeTaille() throws ExeptionCalculSurface {
 
     }
 }

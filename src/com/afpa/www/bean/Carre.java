@@ -1,6 +1,6 @@
 package com.afpa.www.bean;
 
-import com.afpa.www.Exeptions.ExeptionFigureTaille;
+import com.afpa.www.Exeptions.ExeptionCreationFigureTaille;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,8 +9,8 @@ public class Carre extends Figures{
 
     private ArrayList<Double> taille = new ArrayList<>();
     private static double perimetre;
-    public Carre(double longeurA) throws ExeptionFigureTaille {
-        if(longeurA <= 0)throw new ExeptionFigureTaille("L'object instancié ne prend pas de paramètre Négatif OU à 0");
+    public Carre(double longeurA) throws ExeptionCreationFigureTaille {
+        if(longeurA <= 0)throw new ExeptionCreationFigureTaille("L'object instancié ne prend pas de paramètre Négatif OU à 0");
         Collections.addAll(taille, longeurA);
     }
 

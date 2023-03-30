@@ -1,4 +1,4 @@
-package com.afpa.www.Triangle;
+package com.afpa.www.Triangles;
 
 import com.afpa.www.bean.Triangle;
 
