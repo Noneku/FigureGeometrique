@@ -5,8 +5,8 @@ import com.afpa.www.Exeptions.ExeptionCreationFigureTaille;
 import java.util.ArrayList;
 
 public abstract class Figures {
-    private static double surface;
-    private static double perimetre;
+    private double surface;
+    private double perimetre;
 
 
     public double calculPerimetre(ArrayList<Double> arrayList){
@@ -15,6 +15,11 @@ public abstract class Figures {
             sum += i;
         }
         return perimetre = sum;
+    }
+    protected double calculSurface(Double Perimetre){
+        double longeurLargeur = Perimetre / 2;
+        surface = (longeurLargeur * longeurLargeur);
+        return surface;
     }
 
     public void changeTaille(ArrayList<Double> arrayList, double multiply) throws ExeptionCreationFigureTaille {
@@ -38,5 +43,10 @@ public abstract class Figures {
 
     public double getPerimetre() {
         return perimetre;
+    }
+    //Setter
+
+    public void setSurface(double surface) {
+        this.surface = surface;
     }
 }

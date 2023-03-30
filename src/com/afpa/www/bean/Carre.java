@@ -23,8 +23,8 @@ public class Carre extends Figures{
         return taille.get(0) * 4;
     }
 
-    protected static void calculSurface(){
+    public double getSurface() {
 
+        return super.calculSurface(this.getPerimetre());
     }
-
 }

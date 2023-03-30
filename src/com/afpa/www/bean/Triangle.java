@@ -18,6 +18,10 @@ public class Triangle extends Figures {
         return taille;
     }
 
+    public double getPerimetre() {
+        return super.calculPerimetre(taille);
+    }
+
     @Override
     public String toString() {
         return "Triangle{" +
