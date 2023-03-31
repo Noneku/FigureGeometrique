@@ -4,7 +4,7 @@ import com.afpa.www.Exeptions.ExeptionCreationFigureTaille;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
+//
 public class Carre extends Figures{
 
     private ArrayList<Double> taille = new ArrayList<>();
